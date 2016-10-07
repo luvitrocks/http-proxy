@@ -11,7 +11,7 @@ local ProxyServer = require('TBD')
 local proxy = ProxyServer:new({target = 'www.google.de'})
 proxy:listen(1337)
 ```
-
+[Full example](https://github.com/luvitrocks/luvit-http-proxy/blob/master/examples/simple.lua)
 
 ## License
 
