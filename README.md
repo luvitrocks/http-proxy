@@ -1,5 +1,5 @@
-# luvit-http-proxy
-`luvit-http-proxy` is an HTTP proxying library for [luvit](https://luvit.io) heavily inspired by [`node-http-proxy`](https://github.com/nodejitsu/node-http-proxy)
+# http-proxy
+`http-proxy` is an HTTP proxying library for [luvit](https://luvit.io) heavily inspired by [`node-http-proxy`](https://github.com/nodejitsu/node-http-proxy)
 
 ## Install
 Using [lit](https://github.com/luvit/lit) as dependency manager:
