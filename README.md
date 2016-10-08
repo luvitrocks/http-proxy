@@ -2,12 +2,16 @@
 `luvit-http-proxy` is an HTTP proxying library for [luvit](https://luvit.io) heavily inspired by [`node-http-proxy`](https://github.com/nodejitsu/node-http-proxy)
 
 ## Install
-TBD
+Using [lit](https://github.com/luvit/lit) as dependency manager:
+
+```bash
+lit install phil-r/http-proxy
+```
 
 ## Example
 
 ```lua
-local ProxyServer = require('TBD')
+local ProxyServer = require('http-proxy')
 local proxy = ProxyServer:new({target = 'www.google.de'})
 proxy:listen(1337)
 ```

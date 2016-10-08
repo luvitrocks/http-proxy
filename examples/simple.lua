@@ -1,4 +1,4 @@
-local ProxyServer = require('../index')
+local ProxyServer = require('../init')
 
 local proxy = ProxyServer:new({target = 'www.google.de'})
 
