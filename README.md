@@ -8,14 +8,33 @@ Using [lit](https://github.com/luvit/lit) as dependency manager:
 lit install phil-r/http-proxy
 ```
 
-## Example
+## Examples
+
+### Standalone
 
 ```lua
 local ProxyServer = require('http-proxy')
-local proxy = ProxyServer:new({target = 'www.google.de'})
+local proxy = ProxyServer:new{target = 'www.google.de'}
 proxy:listen(1337)
 ```
 [Full example](https://github.com/luvitrocks/http-proxy/blob/master/examples/simple.lua)
+
+### With [Utopia](https://github.com/luvitrocks/utopia)
+
+```lua
+local Utopia = require('utopia')
+local ProxyServer = require('http-proxy')
+
+local proxy = ProxyServer:new{target = 'www.google.de'}
+local app = Utopia:new()
+
+app:use(proxy.web)
+app:listen(1337)
+
+print('Proxy server running at http://127.0.0.1:1337/')
+
+```
+[Full example](https://github.com/luvitrocks/http-proxy/blob/master/examples/utopia.lua)
 
 ## License
 
