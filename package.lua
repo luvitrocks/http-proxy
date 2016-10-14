@@ -1,6 +1,6 @@
 return {
   name = "phil-r/http-proxy",
-  version = "0.0.1",
+  version = "0.0.2",
   description = "HTTP proxying for luvit",
   repository = {
     url = "https://github.com/luvitrocks/http-proxy",

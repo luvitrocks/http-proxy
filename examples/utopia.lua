@@ -1,15 +1,10 @@
+local Utopia = require('utopia')
 local ProxyServer = require('../init')
 
 local proxy = ProxyServer:new{target = 'www.google.de'}
+local app = Utopia:new()
 
-proxy:on('start', function()
-  p('start')
-end)
-
-proxy:on('end', function()
-  p('end')
-end)
-
-proxy:listen(1337)
+app:use(proxy.web)
+app:listen(1337)
 
 print('Proxy server running at http://127.0.0.1:1337/')

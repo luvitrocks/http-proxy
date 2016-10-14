@@ -1,17 +1,17 @@
 local Emitter = require('core').Emitter
 local http = require('http')
-local web = require('./passes')
+local webPasses = require('./passes')
 
 local ProxyServer = Emitter:extend()
+
 function ProxyServer:initialize (opts)
   self.opts = opts or {}
-  self.passes = web
   self.web = self:createServer('web')
 end
 
 function ProxyServer:createServer (type)
   return function (req, res)
-    for i, pass in ipairs(self.passes) do
+    for i, pass in ipairs(webPasses) do
       -- if pass returns truthy val - abort!
       if pass(req, res, self.opts, self) then
         break
